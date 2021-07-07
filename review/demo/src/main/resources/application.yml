@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/demo # MVCC true는 넣어주는게 권장이라고?
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # table을 매번 자동으로 만들어줌.(drop & create)
+    properties:
+      hibernate:
+#        show_sql: true # sout으로 나가는것
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # 로거로 나가는 것
+    org.hibernate.type: trace

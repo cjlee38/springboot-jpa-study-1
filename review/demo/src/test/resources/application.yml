@@ -1,0 +1,22 @@
+# 테스트를 돌릴때, 테스트 폴더에 yml이 있으면 테스트 yaml이 우선권을 갖는다.
+# 그리고 이 밑에 다 없어도 됨. spring에서 자체적으로 memory db를 사용.
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:test # h2 document에서 확인할 수 있음.
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create # table을 매번 자동으로 만들어줌.(drop & create) # create = 다 drop하고 create, create-drop = drop & crate & drop
+#    properties:
+#      hibernate:
+##        show_sql: true # sout으로 나가는것
+#        format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug # 로거로 나가는 것
+    org.hibernate.type: trace
