@@ -13,6 +13,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // 한 테이블에 다 때려박는것...?
 @DiscriminatorColumn(name = "dtype")
 @Getter
+@Setter
 public abstract class Item {
 
     @Id
@@ -20,7 +21,7 @@ public abstract class Item {
     @Column(name = "item_id")
     private Long id;
 
-    private String name;명
+    private String name;
     private int price;
     private int stockQuantity;
 
