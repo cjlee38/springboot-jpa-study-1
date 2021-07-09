@@ -20,6 +20,7 @@ public class ItemRepository {
             em.persist(item); // 기존에 item이 없다 -> 아이템을 처음 등록할때는 아직 id가 없음.
         } else {
             em.merge(item); // 업데이트 비슷한것. -> 디비에 이미 있는 녀석을 변경하겠다. (나중에 설명)
+            // 이제 보니까, "수정 할 때에" 여기 else로 분기를 타네.
         }
     }
 
